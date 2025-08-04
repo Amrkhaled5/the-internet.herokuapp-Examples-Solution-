@@ -92,6 +92,11 @@ public class HomePage {
         return new JavaScriptAlertsPage(driver);
     }
 
+    public KeyPressesPage keyPressesPage(){
+        clickLink("Key Presses");
+        return new KeyPressesPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
