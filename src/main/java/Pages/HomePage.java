@@ -87,6 +87,11 @@ public class HomePage {
         return new InputsPage(driver);
     }
 
+    public JavaScriptAlertsPage javaScriptAlertsPage(){
+        clickLink("JavaScript Alerts");
+        return new JavaScriptAlertsPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
