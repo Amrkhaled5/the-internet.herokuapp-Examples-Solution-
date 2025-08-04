@@ -112,6 +112,11 @@ public class HomePage {
         return new NotificationMessagesPage(driver);
     }
 
+    public NestedFramesPage nestedFramesPage(){
+        clickLink("Nested Frames");
+        return new NestedFramesPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
