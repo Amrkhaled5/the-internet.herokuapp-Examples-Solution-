@@ -107,6 +107,11 @@ public class HomePage {
         return new RedirectLinkPage(driver);
     }
 
+    public NotificationMessagesPage notificationMessagesPage(){
+        clickLink("Notification Messages");
+        return new NotificationMessagesPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
