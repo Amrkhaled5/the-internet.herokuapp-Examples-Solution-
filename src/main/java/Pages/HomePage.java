@@ -82,6 +82,11 @@ public class HomePage {
         return new ShiftingContentPage(driver);
     }
 
+    public InputsPage inputsPage(){
+        clickLink("Inputs");
+        return new InputsPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
