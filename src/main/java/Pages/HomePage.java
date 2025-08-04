@@ -102,10 +102,14 @@ public class HomePage {
         return new InfiniteScrollPage(driver);
     }
 
+    public RedirectLinkPage redirectLinkPage(){
+        clickLink("Redirect Link");
+        return new RedirectLinkPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
-
 
 
 }
