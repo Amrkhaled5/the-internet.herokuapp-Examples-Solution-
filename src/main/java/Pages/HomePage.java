@@ -97,6 +97,11 @@ public class HomePage {
         return new KeyPressesPage(driver);
     }
 
+    public InfiniteScrollPage infiniteScrollPage(){
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
