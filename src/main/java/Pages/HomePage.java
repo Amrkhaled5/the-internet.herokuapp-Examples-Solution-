@@ -1,5 +1,6 @@
 package Pages;
 
+import Pages.FormAuthentication.FormAuthenticationPage;
 import Pages.ShiftingContentPages.ShiftingContentPage;
 import Pages.StatusCodesPages.StatusCodesPage;
 import org.openqa.selenium.By;
@@ -117,9 +118,20 @@ public class HomePage {
         return new NestedFramesPage(driver);
     }
 
+    public MultipleWindowsPage multipleWindowsPage(){
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
+    }
+
+    public FormAuthenticationPage formAuthenticationPage(){
+        clickLink("Form Authentication");
+        return new FormAuthenticationPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
+
 
 
 }
