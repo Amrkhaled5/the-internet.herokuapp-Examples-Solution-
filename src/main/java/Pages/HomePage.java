@@ -128,6 +128,11 @@ public class HomePage {
         return new FormAuthenticationPage(driver);
     }
 
+    public ForgotPasswordPage forgotPasswordPage(){
+        clickLink("Forgot Password");
+        return new ForgotPasswordPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
