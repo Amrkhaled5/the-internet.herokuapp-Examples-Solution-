@@ -133,6 +133,11 @@ public class HomePage {
         return new ForgotPasswordPage(driver);
     }
 
+    public JQueryUIMenusPage jQueryUIMenusPage(){
+        clickLink("JQuery UI Menus");
+        return new JQueryUIMenusPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
