@@ -163,6 +163,11 @@ public class HomePage {
         return new FileDownloadPage(driver);
     }
 
+    public EntryAdPage entryAdPage(){
+        clickLink("Entry Ad");
+        return new EntryAdPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
