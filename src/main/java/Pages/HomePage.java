@@ -178,6 +178,11 @@ public class HomePage {
         return new DynamicControlsPage(driver);
     }
 
+    public LargeAndDeepDOMPage largeAndDeepDOMPage(){
+        clickLink("Large & Deep DOM");
+        return new LargeAndDeepDOMPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }

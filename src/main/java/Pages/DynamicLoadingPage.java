@@ -1,8 +1,11 @@
 package Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -32,6 +35,14 @@ public class DynamicLoadingPage {
     public  boolean checkHeeloWorldMsgApper(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(loadingBar));
+
+        // In  Example 2 you  will use the same code but you muse use invisibilityOfElementLocated invisibilityOf
+        //or useFluent wait and use .ignore
+
+//        FluentWait<WebElement> wait=new FluentWait<>(driver).withTimeout(Duration.ofSeconds(5)).pollingEvery(Duration.ofSeconds(1))
+//                .ignoreAll(NoSuchElementException.class);
+//        wait.until(ExpectedConditions.invisibilityOfElementLocated(loadingBar));
+
         return driver.findElement(helloWorldMsg).isDisplayed();
     }
 
