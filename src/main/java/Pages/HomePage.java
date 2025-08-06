@@ -153,6 +153,16 @@ public class HomePage {
         return new FloatingMenuPage(driver);
     }
 
+    public FileUploadPage fileUploadPage(){
+        clickLink("File Upload");
+        return new FileUploadPage(driver);
+    }
+
+    public FileDownloadPage  fileDownloadPage(){
+        clickLink("File Download");
+        return new FileDownloadPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }

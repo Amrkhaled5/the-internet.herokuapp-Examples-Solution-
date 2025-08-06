@@ -15,7 +15,7 @@ public class FloatingMenuTest extends BaseTest {
     public void setUpPage() {
         floatingMenuPage = homePage.floatingMenuPage();
     }
-    
+
     @DataProvider(name = "pages")
     public Object[][] getData(){
         return new Object[][]{
