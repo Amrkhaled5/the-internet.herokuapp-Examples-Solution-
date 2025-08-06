@@ -138,8 +138,25 @@ public class HomePage {
         return new JQueryUIMenusPage(driver);
     }
 
+    public HorizontalSliderPage horizontalSliderPage(){
+        clickLink("Horizontal Slider");
+        return new HorizontalSliderPage(driver);
+    }
+
+    public GeolocationPage geolocationPage(){
+        clickLink("Geolocation");
+        return new GeolocationPage(driver);
+    }
+
+    public FloatingMenuPage  floatingMenuPage(){
+        clickLink("Floating Menu");
+        return new FloatingMenuPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
+
+
 
 }
