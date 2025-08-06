@@ -158,6 +158,11 @@ public class HomePage {
         return new FileUploadPage(driver);
     }
 
+    public DynamicLoadingPage dynamicLoadingPage(){
+        clickLink("Dynamic Loading");
+        return new DynamicLoadingPage(driver);
+    }
+
     public FileDownloadPage  fileDownloadPage(){
         clickLink("File Download");
         return new FileDownloadPage(driver);
@@ -168,9 +173,15 @@ public class HomePage {
         return new EntryAdPage(driver);
     }
 
+    public DynamicControlsPage  dynamicControlsPage(){
+        clickLink("Dynamic Controls");
+        return new DynamicControlsPage(driver);
+    }
+
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
+
 
 
 
